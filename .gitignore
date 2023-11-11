@@ -1,3 +1,7 @@
+#dirs
+2_Build/*
+0_bin/
+1_lib/
 # Prerequisites
 *.d
 
