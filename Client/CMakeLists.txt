@@ -10,7 +10,6 @@ aux_source_directory(. DIR_SRCS)
 
 #需要包含的头文件目录
 include_directories(
-${FL_include_path}
 ${Modules_include_path}
 ${Comm_include_path} 
 )
@@ -25,7 +24,7 @@ ${Comm_include_path}
 add_executable(${TARGET} ${DIR_SRCS})
 
 #需要链接的库名
-target_link_libraries(${TARGET} fltk core comm)
+target_link_libraries(${TARGET} core comm)
 
 #需要先于当前库编译的动态库
 add_dependencies(${TARGET} core comm)

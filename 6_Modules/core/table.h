@@ -1,4 +1,5 @@
-#pragma once
+#ifndef __TABLE_H__
+#define __TABLE_H__
 
 #include "fl_comm.h"
 #include "tools.h"
@@ -18,3 +19,5 @@ public:
 
   void draw_cell(TableContext context, int R=0, int C=0, int X=0, int Y=0, int W=0, int H=0);
 };
+
+#endif // __TABLE_H__
