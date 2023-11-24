@@ -1,6 +1,6 @@
 #dirs
 .vscode/
-2_Build/*
+2_Build/
 1_lib/
 # Prerequisites
 *.d
@@ -26,8 +26,6 @@
 # Compiled Static libraries
 *.lai
 *.la
-*.a
-*.lib
 
 # Executables
 *.exe
