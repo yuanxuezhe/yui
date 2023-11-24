@@ -1,4 +1,5 @@
-::del /Q /S 2_build
+mkdir 2_build
+del /Q /S 2_build
 cd 2_build
 cmake ..
 cmake --build .
