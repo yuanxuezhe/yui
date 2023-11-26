@@ -26,4 +26,5 @@ ${tinyxml2_lib_path}
 add_executable(${TARGET} ${DIR_SRCS})
 
 #需要链接的库名
+#target_link_libraries(${TARGET}  tinyxml2 yscore)
 target_link_libraries(${TARGET}  tinyxml2 yscore)
