@@ -1,20 +1,28 @@
 #include "callback.h"
 
 
-void TestPrint1(char* str)
+const char* TestPrint1(char* str)
 {
     std::cout << "TestPrint1" << std::endl;
+
+    return "TestPrint1";
 }
 
-void TestPrint2(char* str)
+const char* TestPrint2(char* str)
 {
     std::cout << "TestPrint2"  << std::endl;
+
+    return "TestPrint2";
 }
-void TestPrint3(char* str)
+const char* TestPrint3(char* str)
 {
     std::cout << "TestPrint3"  << std::endl;
+
+    return "TestPrint3";
 }
-void TestPrint4(char* str)
+const char* TestPrint4(char* str)
 {
     std::cout << "TestPrint4"  << std::endl;
+
+    return "TestPrint4";
 }

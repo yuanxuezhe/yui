@@ -63,6 +63,8 @@ public:
     Frame(const char* pos);
     ~Frame();
 
+    static void CallBack(fl_Widget b, void* data);
+
     void GetPos(const char* pos, int& x, int& y, int& w, int& h);
 
     bool LoadXml(const char* xmlPath);
@@ -87,6 +89,6 @@ public:
     int m_nFrameY;
     int m_nFrameW;
     int m_nFrameH;
-};
-
+ };
+ 
 #endif // __FRAME_H__

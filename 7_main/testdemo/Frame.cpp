@@ -15,6 +15,17 @@ Frame::Frame(const char* pos){
 Frame::~Frame(){
 }
 
+
+void Frame::CallBack(fl_Widget b, void* data){
+    _tagComponentInfo* pComponentInfo = (_tagComponentInfo*)data;
+    if (!pComponentInfo) {
+        std::cout << "Error: " << __FILE__ << ":" << __LINE__ << std::endl;
+        return;
+    }
+    Fl_File_Input_set_value((fl_File_Input)pComponentInfo->pComponent, "zxzxzzxxz");
+    //(Fl_Button*)b->label(pComponentInfo->strText.c_str());
+}
+
 void Frame::GetPos(const char* pos, int& x, int& y, int& w, int& h){
     if (pos) {
         std::string posStr(pos);
@@ -355,7 +366,7 @@ bool Frame::SetCallbackByComponentInfo(_tagComponentInfo& componentInfo) {
         Fl_Double_Window_set_callback(componentInfo.pComponent, (fl_Callback*)pFunction);
     }
     else if (componentInfo.strType == "Button") {
-        Fl_Button_set_callback(componentInfo.pComponent, (fl_Callback*)pFunction);
+        Fl_Button_set_callback_with_user_data(componentInfo.pComponent, CallBack, (void*)&m_mapComponents[6]);
     }
     // else if (componentInfo.strType == "Label") {
     //     componentInfo.pComponent = new Label();
@@ -452,4 +463,4 @@ bool Frame::LoadElementLayout(tinyxml2::XMLElement* pElement) {
     }
 
     return true;
-}
+    } 

@@ -8,10 +8,10 @@
 using namespace std;
 
 extern "C" {
-  DLLExport  void TestPrint1(char* str);
-  DLLExport  void TestPrint2(char* str);
-  DLLExport  void TestPrint3(char* str);
-  DLLExport  void TestPrint4(char* str);
+  DLLExport  const char* TestPrint1(char* str);
+  DLLExport  const char* TestPrint2(char* str);
+  DLLExport  const char* TestPrint3(char* str);
+  DLLExport  const char* TestPrint4(char* str);
 };
 
 #endif // __TEST_CALLBACK_H__
