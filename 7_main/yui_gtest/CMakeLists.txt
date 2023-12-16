@@ -3,7 +3,7 @@ message(STATUS "CMAKE_CURRENT_SOURCE_DIR:${CMAKE_CURRENT_SOURCE_DIR}")
 STRING( REGEX REPLACE ".*/(.*)" "\\1" CURRENT_FOLDER ${CMAKE_CURRENT_SOURCE_DIR} )
 set(TARGET ${TARGET_PREFIX}${LBM_NAME}${CURRENT_FOLDER})
 
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY  ${PROJECT_SOURCE_DIR})
+#set(CMAKE_RUNTIME_OUTPUT_DIRECTORY  ${PROJECT_SOURCE_DIR})
 
 # 查找当前目录下的所有源文件，并将名称保存到 DIR_SRCS 变量
 aux_source_directory(. DIR_SRCS)
@@ -24,4 +24,4 @@ ${gtest_lib_path}
 add_executable(${TARGET} ${DIR_SRCS})
 
 #需要链接的库名
-target_link_libraries(${TARGET}  gtest gtest_main pthread)
+target_link_libraries(${TARGET}  gtest gtest_main pthread comm)

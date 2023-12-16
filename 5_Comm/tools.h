@@ -13,6 +13,9 @@ public:
 
     template <typename T, typename... Args>
     static std::string Concatenate(T t, Args... args);
+
+    // 长度拼接
+    static std::string GetVirtualStkAcct(std::string strCuacctCode, std::string strBoard, int len = 0);
 };
 
 template <typename T>
